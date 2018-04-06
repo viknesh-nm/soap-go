@@ -33,7 +33,7 @@ func (c Client) MarshalXML(e *xml.Encoder, _ xml.StartElement) error {
 			},
 		}
 
-		tokens = append(tokens, t, xml.CharData(v), xml.EndElement{Name: t.Name})
+		tokens = append(tokens, t, xml.CharData(v.(string)), xml.EndElement{Name: t.Name})
 	}
 	//end envelope
 	endToken(c.Method)

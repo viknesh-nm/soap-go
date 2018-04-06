@@ -153,7 +153,7 @@ type xsdMaxInclusive struct {
 	Value string `xml:"value,attr"`
 }
 
-// GetWsdlDefinitions  sent request to the wsdl url and set definitions on struct
+// GetWsdlDefinitions sent request to the wsdl url and set definitions on struct
 func GetWsdlDefinitions(u string) (wsdl *WSDLDefinitions, err error) {
 	r, err := http.Get(u)
 	if err != nil {
